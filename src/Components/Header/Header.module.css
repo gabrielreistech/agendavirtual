@@ -12,6 +12,7 @@
     align-items: center;
     font-size: 36px;   
     border-right: 3px solid black;
+    border-bottom: 3px solid black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -26,6 +27,7 @@
     color: white;
     height: 100px;
     justify-content: center;
+    border-bottom: 3px solid black;
 }
 
 .container header ul{
