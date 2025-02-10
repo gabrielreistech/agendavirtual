@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+}
+
+.container h1{
+    background-color: rgb(0, 191, 255);
+    color: white;
+    width: 30%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;   
+    border-right: 3px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container h1:hover{
+    cursor: pointer;
+}
+
+.container header{
+    display: flex;
+    width: 70%;
+    background-color: rgb(0, 191, 255);
+    color: white;
+    height: 100px;
+    justify-content: center;
+}
+
+.container header ul{
+    width: 950px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.container header ul li{
+    color: white;
+    font-size: 25px;
+    list-style-type: none;
+    padding: 15px;
+}
+
+.container header ul li:hover{
+    color: black;
+    cursor: pointer;
+}
