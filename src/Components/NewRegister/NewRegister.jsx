@@ -1,12 +1,13 @@
 import styles from "./NewRegister.module.css";
 import { useForm} from "react-hook-form"; 
 
-const NewRegister = () => {
+const NewRegister = ({sendData}) => {
 
     const{register, handleSubmit, reset, formState:{ errors }} = useForm();
 
     const onSubmit = (data) => {
         console.log(data);
+        sendData(data);
         reset();
     }
 
@@ -31,17 +32,23 @@ const NewRegister = () => {
 
             <div className={styles.formDate}>
                 <label htmlFor="date">Escolha a data:</label>
-                <input id="date" type="date" />
+                <input id="date" type="date" 
+                {...register('date')}
+                />
             </div>
 
             <div className={styles.formTime}>
                 <label htmlFor="time">Escolha o horário:</label>
-                <input id="time" type="time" />
+                <input id="time" type="time" 
+                {...register('time')}
+                />
             </div>
 
             <div className={styles.formDescription}>
                 <label htmlFor="description">Faça uma descrição sobre o agendamento:</label>
-                <textarea id="description" type="text" placeholder="Faça uma descrição sobre seu agendamento" />
+                <textarea id="description" type="text"
+                {...register('description')}
+                placeholder="Faça uma descrição sobre seu agendamento" />
             </div>
 
             <div className={styles.button}>
