@@ -1,16 +1,22 @@
 import styles from "./Header.module.css"
+import {Link} from "react-router-dom"
 
 const Header = () => {
     return(
   
         <div className={styles.container}>
-          <h1>Agenda Virtual</h1>
 
+          <h1><Link to="/">Agenda Virtual</Link></h1>
+
+          <div className={styles.input}>
+            <input type="text" placeholder="Busque por seus agendamentos"/>
+          </div>
+          
           <header>
             <ul>
-                <li>Home</li>
-                <li>Meus Agendamentos</li>
-                <li>Sobre</li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/meusagendamentos">Meus Agendamentos</Link></li>
+                <li><Link to="/sobre">Sobre</Link></li>
             </ul>
           </header>
 
