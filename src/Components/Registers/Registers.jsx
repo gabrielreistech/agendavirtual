@@ -11,7 +11,7 @@ const Registers = ({dados}) => {
           </div>
           
           <div>
-            {dados.map((agendamentos, index) => (
+            {dados.slice(-3).map((agendamentos, index) => (
             <Card key={index} {...agendamentos} />))
             }
           </div>
