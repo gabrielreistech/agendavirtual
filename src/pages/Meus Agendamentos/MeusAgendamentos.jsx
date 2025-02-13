@@ -1,23 +1,22 @@
 import { useContext } from "react";
-import Card from "../../Components/Card/Card";
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header"
 import { MyContext } from "../../Context/MeusAgendamentos";
 import styles from "./MeusAgendamentos.module.css"
+import { SearchContext } from "../../Context/Search";
+import DataWithFilter from "../../Components/FiltroSearch/DataWithFilter";
 
 const MeusAgendamentos = () => {
 
    const{agendamento} = useContext(MyContext);
+   const{search} = useContext(SearchContext);
 
    return(
       <>
       <Header />
-      <h1>Total de meus agendamentos: {agendamento.length}</h1>
+      <h1 className={styles.h1}>Total de meus agendamentos: {agendamento.length}</h1>
       <div className={styles.box}>
-         {agendamento.slice().reverse().map((dados, index) => (
-             <Card key={index} {...dados} />
-         ))
-         }
+         <DataWithFilter search={search} dados={agendamento} />
       </div>
       
       <Footer />

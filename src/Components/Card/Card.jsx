@@ -1,8 +1,7 @@
 import styles from "./Card.module.css"
 
 const Card = (props) => {
- 
-   console.log(props)
+
    return(
       <div className={styles.container}>
          <p><span>Nome do Agendamento:</span> {props.name}</p>

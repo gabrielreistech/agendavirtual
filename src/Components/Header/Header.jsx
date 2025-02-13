@@ -1,15 +1,26 @@
 import styles from "./Header.module.css"
 import {Link} from "react-router-dom"
+import { SearchContext } from "../../Context/Search";
+import { useContext } from "react";
 
 const Header = () => {
-    return(
+  
+  const{setSearch} = useContext(SearchContext);
+
+
+  const handleOnChange = (e) => {
+    setSearch(e.target.value);
+  }
+  
+  return(
   
         <div className={styles.container}>
 
           <h1><Link to="/">Agenda Virtual</Link></h1>
 
           <div className={styles.input}>
-            <input type="text" placeholder="Busque por seus agendamentos"/>
+            <input id="search" type="text" placeholder="Digite sua pesquisa" onChange={handleOnChange}/>
+            <span className={styles.emoji}>🔍</span>
           </div>
           
           <header>
