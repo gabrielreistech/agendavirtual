@@ -1,12 +1,15 @@
+import { useContext } from "react";
 import styles from "./NewRegister.module.css";
-import { useForm} from "react-hook-form"; 
+import { useForm } from "react-hook-form"; 
+import { MyContext } from "../../Context/MeusAgendamentos";
 
-const NewRegister = ({sendData}) => {
+const NewRegister = () => {
 
     const{register, handleSubmit, reset, formState:{ errors }} = useForm();
+    const{handleAdd} = useContext(MyContext);
 
     const onSubmit = (data) => {
-        sendData(data);
+        handleAdd(data);
         reset();
     }
 

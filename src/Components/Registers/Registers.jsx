@@ -1,11 +1,7 @@
-import { useContext } from "react";
 import styles from "./Registers.module.css";
-import { SearchContext } from "../../Context/Search";
-import DataWithFilter from "../FiltroSearch/DataWithFilter";
+import DataWithFilterRecent from "../DataWithFilter/DataWithFilterRecent";
 
-const Registers = ({dados}) => {
-
-   const{search} = useContext(SearchContext);
+const Registers = () => {
    
    return(
 
@@ -15,7 +11,7 @@ const Registers = ({dados}) => {
              <h2>Meus agendamentos recentes</h2>
           </div>
 
-          <DataWithFilter search={search} dados={dados} />
+          <DataWithFilterRecent />
           
       </div>
    );

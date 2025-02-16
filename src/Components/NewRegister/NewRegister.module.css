@@ -31,18 +31,21 @@
     margin-left: 10px;
     border: 0;
     box-shadow: 1px 2px 10px gray;
+    cursor: pointer;
 }
 
 .formDate input{
     margin-left: 105px;
     border: 0;
     box-shadow: 1px 2px 10px gray;
+    cursor: pointer;
 }
 
 .formTime input{
     margin-left: 68px;
     border: 0;
     box-shadow: 1px 2px 10px gray;
+    cursor: pointer;
 }
 
 .formDescription{

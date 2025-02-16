@@ -1,10 +1,18 @@
 import styles from "./Footer.module.css"
 
 const Footer = () => {
-    return(
-      <div className={styles.container}>
-        <h2>Por enquanto apenas uma frase para preencher o espaço</h2>
-      </div> 
+    return (
+        <footer>
+            <div className={styles.container}>
+
+                <div className={styles.data}>
+                    <ul>
+                      <li>2025 Agenda Virtual. Todos os direitos reservados.</li>
+                      <li><strong>Email:</strong> gabrielreistech@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     );
 }
 
